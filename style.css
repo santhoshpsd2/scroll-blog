@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #296ca8;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.input-div {
+  width: min(80%, 800px);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.filter {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.posts {
+  width: min(80%, 800px);
+  margin-bottom: 2rem;
+}
+
+.posts > *:where(:not(:first-child)) {
+  margin-top: 2rem;
+}
+
+.post {
+  background: #4992d3;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.post h2 {
+  margin-bottom: 1rem;
+}
+
+.id {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: white;
+  color: black;
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+}
+
+.loader.active {
+  opacity: 1;
+}
+
+.circle {
+  padding: 10px;
+  aspect-ratio: 1;
+  background: palevioletred;
+  border-radius: 50%;
+  border: none;
+  animation: loading 1s ease-in infinite;
+}
+
+.circle2 {
+  animation-delay: 0.1s;
+}
+
+.circle3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes loading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.overflow {
+  width: 50%;
+  max-height: 200px;
+  overflow: scroll;
+}
